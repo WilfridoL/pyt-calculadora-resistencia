@@ -11,17 +11,14 @@
 
 <body class="bg-gray-100 text-gray-800">
 
-    <!-- HEADER -->
     <header class="bg-indigo-700 text-white py-4 shadow-md">
         <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
             <h1 class="text-2xl font-semibold">Calculadora de Resistencia</h1>
         </div>
     </header>
 
-    <!-- MAIN CONTAINER -->
     <main class="max-w-5xl mx-auto mt-10 px-4 grid md:grid-cols-2 gap-10">
 
-        <!-- FORM -->
         <form id="form" class="bg-white p-6 rounded-xl shadow-md space-y-4">
 
             <div>
@@ -52,8 +49,8 @@
                 <label class="font-medium">Tolerancia</label>
                 <select data-select class="w-full p-2 border border-gray-300 rounded-lg">
                     <option value="" hidden selected>Seleccione un color</option>
-                    <option value="5" style="background:#EBB866;color:white;">Oro</option>
-                    <option value="10" style="background:#e3e4e5;color:black;">Plata</option>
+                    <option value="5" style="background:#EBB866;color:white;">Oro (±5%)</option>
+                    <option value="10" style="background:#e3e4e5;color:black;">Plata (±10%)</option>
                 </select>
                 <p class="msjErr">error</p>
             </div>
@@ -63,11 +60,9 @@
             </button>
         </form>
 
-        <!-- DISPLAY RESISTENCIA -->
         <section class="bg-white p-6 rounded-xl shadow-md text-center">
-            <h2 class="text-xl font-semibold mb-4">Vista de la Resistencia</h2>
+            <h2 class="text-2xl font-semibold mb-4">Vista de la Resistencia</h2>
 
-            <!-- NO SE MODIFICA ESTE BLOQUE -->
             <div class="display">
                 <div class="resistencia"></div>
                 <div class="resistencia">
@@ -95,14 +90,12 @@
         </section>
     </main>
 
-    <!-- RESULTADO -->
     <section class="max-w-5xl mx-auto mt-10 px-4 text-center">
         <div id="resultado" class="bg-white p-6 rounded-xl shadow-md">
-            <h2 class="text-2xl font-bold">Valor de la resistencia</h2>
+            <h2 class="text-2xl font-semibold">Valor de la resistencia</h2>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="bg-indigo-700 text-white text-center py-4 mt-14">
         <p class="text-sm">© 2025 Calculadora de Resistencia | WilDev</p>
     </footer>

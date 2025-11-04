@@ -1,5 +1,4 @@
-
-.display{
+.display {
     display: flex;
     width: auto;
     justify-content: center;
@@ -13,6 +12,7 @@
     width: 30px;
     height: 20px;
     background: #000;
+    z-index: 100000;
 }
 
 .resistencia:nth-child(1) {
@@ -26,12 +26,12 @@
 }
 
 .resistencia:nth-child(2),
-.resistencia:nth-child(5){
+.resistencia:nth-child(5) {
     width: 90px;
     height: 70px;
     background: blanchedalmond;
     border-radius: 10px;
-    overflow: hidden;
+    z-index: 100;
 }
 
 .resistencia:nth-child(2) {
@@ -48,7 +48,7 @@
 
 
 .resistencia:nth-child(3),
-.resistencia:nth-child(4){
+.resistencia:nth-child(4) {
     width: 60px;
     height: 70px;
     display: flex;
@@ -56,7 +56,6 @@
     background: blanchedalmond;
     border-left: 3px solid #000;
     border-right: 3px solid #000;
-    overflow: hidden;
 }
 
 
@@ -68,43 +67,66 @@
     flex-basis: 1;
     display: flex;
     align-items: center;
-    z-index: 10;
+    position: relative;
 }
 
 .resistencia:nth-child(2) .banda {
     margin-top: 12px;
 }
+
 .indicador {
     position: absolute;
-    width: 15%;
-    height: 3px;
-    left: 25%;   
-    background: rgba(0, 0, 0);
+    right: calc(100% + 6px); /* Línea fuera del cuerpo */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    height: 40%;
+    background: #000;
+    color: #FFF;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    z-index: 1;
+    justify-content: flex-start;
+    z-index: 5;
 }
 
 .resistencia:nth-child(3) .indicador,
-.resistencia:nth-child(4) .indicador{
-    width: 18%;
+.resistencia:nth-child(4) .indicador {
+    width: 100%;
 }
 
 .indicador div {
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    right: calc(100% + 6px);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
     background: inherit;
+    color: inherit;
+    font-size: 16px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    color: #fff;
+    justify-content: center;
 }
 
-.msjErr{
+.msjErr {
     color: #F00;
     font-size: 14px;
     display: none;
 }
 
+@media (max-width: 1023px) {
+    .indicador {
+        width: 20px;
+        height: 45%;
+        right: calc(100% + 3px);
+    }
 
+    .indicador > div {
+        width: 22px;
+        /* height: 22px; */
+        font-size: 14px;
+        right: calc(100% + 4px);
+    }
+}

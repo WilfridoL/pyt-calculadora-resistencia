@@ -29,7 +29,7 @@ const rellenarSelect = (campo, tip) => {
                 background: ${bck};
                 color: ${color};
             ">
-            ${nombre} ${tip != 0 ? transformarResultado(value) : id}
+            ${nombre} (${tip != 0 ? 'x'+transformarResultado(value) + ' Ω' : id})
             </option>
         `
     })

@@ -16,6 +16,7 @@ function seleccionarColorBandas(id) {
     selectCampo[id].style.color = selectCampo[id].options[selectCampo[id].selectedIndex].style.color;
     bamdas[id].style.background = selectCampo[id].options[selectCampo[id].selectedIndex].style.background;
     indicador[id].style.background = selectCampo[id].options[selectCampo[id].selectedIndex].style.background;
+    indicador[id].style.color = selectCampo[id].options[selectCampo[id].selectedIndex].style.color;
 }
 
 selectCampo[0].addEventListener('change', () => seleccionarColorBandas(0))
