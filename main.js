@@ -20,6 +20,8 @@ function seleccionarColorBandas(id) {
     bamdas[id].style.background = selectCampo[id].options[selectCampo[id].selectedIndex].style.background;
     indicador[id].style.background = selectCampo[id].options[selectCampo[id].selectedIndex].style.background;
     indicador[id].style.color = selectCampo[id].options[selectCampo[id].selectedIndex].style.color;
+    indicador[id].style.border = ".7px solid";
+    indicador[id].style.borderColor = selectCampo[id].options[selectCampo[id].selectedIndex].style.color;
 }
 
 selectCampo[0].addEventListener('change', () => seleccionarColorBandas(0))
@@ -28,7 +30,8 @@ selectCampo[2].addEventListener('change', () => seleccionarColorBandas(2))
 selectCampo[3].addEventListener('change', () => seleccionarColorBandas(3))
 toggleBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
-document.getElementById("btn").addEventListener('click', () => {
+document.getElementById("btn").addEventListener('click', (e) => {
+    e.preventDefault()
     let resultCal = parseInt(selectCampo[0].value + selectCampo[1].value) * parseInt(selectCampo[2].value)
     // validacion de los campos
     for (let i = 0; i < selectCampo.length; i++) {

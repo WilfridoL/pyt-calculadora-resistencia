@@ -8,6 +8,6 @@ export const validarSelect = (input, msj) => {
         return false
     }else {
         msj.style.display = "none"
-        input.style.borderColor = "transparent"
+        input.style.borderColor = "#d1d5db"
     }
 }
