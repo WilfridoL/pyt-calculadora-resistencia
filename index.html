@@ -11,11 +11,65 @@
 
 <body class="bg-gray-100 text-gray-800">
 
-    <header class="bg-indigo-700 text-white py-4 shadow-md">
-        <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
-            <h1 class="text-2xl font-semibold">Calculadora de Resistencia</h1>
-        </div>
-    </header>
+   <header class="bg-indigo-700 text-white py-4 shadow-md">
+  <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
+    <h1 class="text-2xl font-semibold">Calculadora de Resistencia</h1>
+
+    <button id="menu-toggle" class="text-2xl  md:hidden focus:outline-none">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="menu" class="hidden md:flex space-x-4">
+      <a href="https://es.wikipedia.org/wiki/Resistor" 
+         target="_blank" 
+         class="hover:text-yellow-300 transition-colors">
+         Wikipedia
+      </a>
+      <a href="https://www.digikey.es/" 
+         target="_blank" 
+         class="hover:text-yellow-300 transition-colors">
+         Digi-Key
+      </a>
+      <a href="https://www.falstad.com/circuit/" 
+         target="_blank" 
+         class="hover:text-yellow-300 transition-colors">
+         Simulador Falstad
+      </a>
+      <a href="https://www.electronics-tutorials.ws/" 
+         target="_blank" 
+         class="hover:text-yellow-300 transition-colors">
+         Electronics Tutorials
+      </a>
+    </nav>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden hidden bg-indigo-600">
+    <nav class="flex flex-col space-y-2 px-4 py-3">
+      <a href="https://es.wikipedia.org/wiki/Resistor" 
+         target="_blank" 
+         class="hover:text-yellow-300 transition-colors">
+         Wikipedia
+      </a>
+      <a href="https://www.digikey.es/" 
+         target="_blank" 
+         class="hover:text-yellow-300 transition-colors">
+         Digi-Key
+      </a>
+      <a href="https://www.falstad.com/circuit/" 
+         target="_blank" 
+         class="hover:text-yellow-300 transition-colors">
+         Simulador Falstad
+      </a>
+      <a href="https://www.electronics-tutorials.ws/" 
+         target="_blank" 
+         class="hover:text-yellow-300 transition-colors">
+         Electronics Tutorials
+      </a>
+    </nav>
+  </div>
+</header>
+
+
 
     <main class="max-w-5xl mx-auto mt-10 px-4 grid md:grid-cols-2 gap-10">
 
@@ -101,6 +155,7 @@
     </footer>
 
     <script type="module" src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/bc3dfab8e3.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -6,6 +6,9 @@ const selectCampo = document.querySelectorAll("[data-select]")
 const bamdas = document.querySelectorAll(".banda")
 const indicador = document.querySelectorAll(".indicador")
 const msjErr = document.querySelectorAll(".msjErr")
+const toggleBtn = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
 
 rellenarSelect(selectCampo[0], 0) // Banda 1
 rellenarSelect(selectCampo[1], 0) // Banda 2
@@ -23,12 +26,13 @@ selectCampo[0].addEventListener('change', () => seleccionarColorBandas(0))
 selectCampo[1].addEventListener('change', () => seleccionarColorBandas(1))
 selectCampo[2].addEventListener('change', () => seleccionarColorBandas(2))
 selectCampo[3].addEventListener('change', () => seleccionarColorBandas(3))
+toggleBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
 document.getElementById("btn").addEventListener('click', () => {
     let resultCal = parseInt(selectCampo[0].value + selectCampo[1].value) * parseInt(selectCampo[2].value)
     // validacion de los campos
     for (let i = 0; i < selectCampo.length; i++) {
-        if (validarSelect(selectCampo[i], msjErr[i]) == false && i == selectCampo.length - 1) { 
+        if (validarSelect(selectCampo[i], msjErr[i]) == false && i == selectCampo.length - 1) {
             return; // si se cumple se vuela el codigo restante
         }
     }
