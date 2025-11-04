@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de resistencia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-indigo-700 text-white py-4 shadow-md">
+        <div class="max-w-5xl mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-semibold">Calculadora de Resistencia</h1>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="max-w-5xl mx-auto mt-10 px-4 grid md:grid-cols-2 gap-10">
+
+        <!-- FORM -->
+        <form id="form" class="bg-white p-6 rounded-xl shadow-md space-y-4">
+
+            <div>
+                <label class="font-medium">1.ª banda de color</label>
+                <select name="banda1" data-select class="w-full p-2 border border-gray-300 rounded-lg">
+                    <option value="" hidden selected>Seleccione un color</option>
+                </select>
+                <p class="msjErr">error</p>
+            </div>
+
+            <div>
+                <label class="font-medium">2.ª banda de color</label>
+                <select data-select class="w-full p-2 border border-gray-300 rounded-lg">
+                    <option value="" hidden selected>Seleccione un color</option>
+                </select>
+                <p class="msjErr">error</p>
+            </div>
+
+            <div>
+                <label class="font-medium">Multiplicador</label>
+                <select data-select class="w-full p-2 border border-gray-300 rounded-lg">
+                    <option value="" hidden selected>Seleccione un color</option>
+                </select>
+                <p class="msjErr">error</p>
+            </div>
+
+            <div>
+                <label class="font-medium">Tolerancia</label>
+                <select data-select class="w-full p-2 border border-gray-300 rounded-lg">
+                    <option value="" hidden selected>Seleccione un color</option>
+                    <option value="5" style="background:#EBB866;color:white;">Oro</option>
+                    <option value="10" style="background:#e3e4e5;color:black;">Plata</option>
+                </select>
+                <p class="msjErr">error</p>
+            </div>
+
+            <button type="button" id="btn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 rounded-lg transition">
+                Calcular
+            </button>
+        </form>
+
+        <!-- DISPLAY RESISTENCIA -->
+        <section class="bg-white p-6 rounded-xl shadow-md text-center">
+            <h2 class="text-xl font-semibold mb-4">Vista de la Resistencia</h2>
+
+            <!-- NO SE MODIFICA ESTE BLOQUE -->
+            <div class="display">
+                <div class="resistencia"></div>
+                <div class="resistencia">
+                    <div class="banda" id="banCol1">
+                        <div class="indicador"><div class="">1</div></div>
+                    </div>
+                </div>
+                <div class="resistencia">
+                    <div class="banda" id="banCol2">
+                        <div class="indicador"><div class="">2</div></div>
+                    </div>
+                </div>
+                <div class="resistencia">
+                    <div class="banda" id="multi">
+                        <div class="indicador"><div class="">3</div></div>
+                    </div>
+                </div>
+                <div class="resistencia">
+                    <div class="banda" id="tolerancia">
+                        <div class="indicador"><div class="">4</div></div>
+                    </div>
+                </div>
+                <div class="resistencia"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RESULTADO -->
+    <section class="max-w-5xl mx-auto mt-10 px-4 text-center">
+        <div id="resultado" class="bg-white p-6 rounded-xl shadow-md">
+            <h2 class="text-2xl font-bold">Valor de la resistencia</h2>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-indigo-700 text-white text-center py-4 mt-14">
+        <p class="text-sm">© 2025 Calculadora de Resistencia | WilDev</p>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>

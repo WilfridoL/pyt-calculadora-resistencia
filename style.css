@@ -1,0 +1,110 @@
+
+.display{
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.resistencia:nth-child(1),
+.resistencia:nth-child(6) {
+    width: 30px;
+    height: 20px;
+    background: #000;
+}
+
+.resistencia:nth-child(1) {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.resistencia:nth-child(6) {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.resistencia:nth-child(2),
+.resistencia:nth-child(5){
+    width: 90px;
+    height: 70px;
+    background: blanchedalmond;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.resistencia:nth-child(2) {
+    border-right: 3px solid #000;
+    border-top: 3px solid #000;
+    border-left: 3px solid #000;
+}
+
+.resistencia:nth-child(5) {
+    border-bottom: 3px solid #000;
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+}
+
+
+.resistencia:nth-child(3),
+.resistencia:nth-child(4){
+    width: 60px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    background: blanchedalmond;
+    border-left: 3px solid #000;
+    border-right: 3px solid #000;
+    overflow: hidden;
+}
+
+
+.banda {
+    width: 100%;
+    height: 10px;
+    background: rgba(0, 0, 0, 10%);
+    margin: 5px 0px;
+    flex-basis: 1;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.resistencia:nth-child(2) .banda {
+    margin-top: 12px;
+}
+.indicador {
+    position: absolute;
+    width: 15%;
+    height: 3px;
+    left: 25%;   
+    background: rgba(0, 0, 0);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+}
+
+.resistencia:nth-child(3) .indicador,
+.resistencia:nth-child(4) .indicador{
+    width: 18%;
+}
+
+.indicador div {
+    width: 30px;
+    height: 30px;
+    background: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.msjErr{
+    color: #F00;
+    font-size: 14px;
+    display: none;
+}
+
+
