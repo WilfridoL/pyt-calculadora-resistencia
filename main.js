@@ -34,11 +34,14 @@ document.getElementById("btn").addEventListener('click', (e) => {
     e.preventDefault()
     let resultCal = parseInt(selectCampo[0].value + selectCampo[1].value) * parseInt(selectCampo[2].value)
     // validacion de los campos
+    let errorSelect = false;
+
     for (let i = 0; i < selectCampo.length; i++) {
-        if (validarSelect(selectCampo[i], msjErr[i]) == false && i == selectCampo.length - 1) {
-            return; // si se cumple se vuela el codigo restante
-        }
+        if (validarSelect(selectCampo[i], msjErr[i]) === false) errorSelect = true; // marcamos que hubo error
     }
+
+    if (errorSelect) return; // sale de la función y no ejecuta el resto
+
     document.getElementById('resultado').innerHTML = `
         <h2 class="text-2xl font-bold">Valor de la resistencia</h2>
         <h2 class="text-2xl font-regular">${transformarResultado(resultCal)} Ohms</h2>
