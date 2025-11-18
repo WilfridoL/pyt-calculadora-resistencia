@@ -8,7 +8,7 @@ const data = [
     { id: 6, nombre: "Azul", bck: "#1d4ed8", color: "#fff", value: 1000000 },
     { id: 7, nombre: "Violeta", bck: "#a78bfa", color: "#fff", value: 10000000 },
     { id: 8, nombre: "Gris", bck: "#78716c", color: "#fff", value: 100000000 },
-    { id: 9, nombre: "Blanco", bck: "#fff", color: "#000", value: 1000000000 },
+    { id: 9, nombre: "Blanco", bck: "#fff", color: "#000", value: 1000000000 }
 ]
 
 const transformarResultado = (num) => {
